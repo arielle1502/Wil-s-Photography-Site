@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Poiret+One&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/aa2f1c6bf1.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/parallax.js-1.5.0/parallax.js"></script>
+  <link rel="stylesheet" href="css/grid-gallery.min.css">
+  <script src="js/grid-gallery.min.js"></script>
 </head>
 
 <body>
@@ -29,26 +33,21 @@
               <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#footer-form" id="contact">Contact</a>
-            </li>
-            
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 View Work
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Landscapes</a>
+                <a class="dropdown-item" href="landscapes.html">Landscapes</a>
                 <a class="dropdown-item" href="#">Street</a>
                 <a class="dropdown-item" href="#">Wildlife</a>
               </div>
             </li>
           </ul>
         </div>
-
-
-          <a href="#images" class="btn" id="view-work">
-            About Me
-          </a>
+>
         </div>
       </div>
       <div id="landing-image"><img src="images/whiteflowers.jpg" alt=""></div>
@@ -56,70 +55,89 @@
     <main>
 
     <div id="header"></div>
-    
+    <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/wilshot.jpg">
+      <h3 class="para-header">Landscapes</h3>
+    </div>
+
     <div class="container" id="images">
       <div class="caption">
-        <h3>Landscapes</h3>
+        
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quia aliquam labore unde eos cupiditate ipsa accusamus commodi fuga incidunt, velit natus rerum, quos animi saepe cumque. Rerum laudantium vitae debitis laborum qui voluptates est.</p>
       </div>
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="images/beetlebug.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="images/whiteflowers.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="images/wilshot.jpg" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-        <button type="button" class="btn btn-outline-dark">See in Black & White</button>
-
     </div>
-  
+    <div class="content">
+      
+      <div class="gg-container">
+        <h3>Default</h3>
+        <div class="gg-box">
+          <img src="images/lightbox/1.jpg">
+          <img src="images/lightbox/2.jpg">
+          <img src="images/lightbox/3.jpg">
+          <img src="images/lightbox/4.jpg">
+          <img src="images/lightbox/5.jpg">
+          <img src="images/lightbox/6.jpg">
+          <img src="images/lightbox/7.jpg">
+          <img src="images/lightbox/8.jpg">
+          <img src="images/lightbox/9.jpg">
+          <img src="images/lightbox/10.jpg">
+          <img src="images/lightbox/11.jpg">
+          <img src="images/lightbox/12.jpg">
+          <img src="images/lightbox/13.jpg">
+          <img src="images/lightbox/14.jpg">
+        </div>
+        <h3>Dark Mode</h3>
+        <div class="gg-box dark">
+          <img src="images/lightbox/13.jpg">
+          <img src="images/lightbox/14.jpg">
+          <img src="images/lightbox/15.jpg">
+          <img src="images/lightbox/16.jpg">
+          <img src="images/lightbox/17.jpg">
+          <img src="images/lightbox/18.jpg">
+        </div>
+        <h3>Horizontal Layout</h3>
+        <div class="gg-box dark" id="horizontal">
+          <img src="images/lightbox/1.jpg">
+          <img src="images/lightbox/2.jpg">
+          <img src="images/lightbox/3.jpg">
+          <img src="images/lightbox/4.jpg">
+          <img src="images/lightbox/5.jpg">
+          <img src="images/lightbox/6.jpg">
+        </div>
+        <h3>Square Layout</h3>
+        <div class="gg-box dark" id="square">
+          <img src="images/lightbox/11.jpg">
+          <img src="images/lightbox/12.jpg">
+          <img src="images/lightbox/13.jpg">
+          <img src="images/lightbox/14.jpg">
+          <img src="images/lightbox/15.jpg">
+          <img src="images/lightbox/16.jpg">
+          <img src="images/lightbox/17.jpg">
+          <img src="images/lightbox/18.jpg">
+        </div>
+        <h3>Customized Gap</h3>
+        <p>Gap between images with value of 10px</p>
+        <div class="gg-box" id="gap">
+          <img src="images/lightbox/6.jpg">
+          <img src="images/lightbox/7.jpg">
+          <img src="images/lightbox/8.jpg">
+          <img src="images/lightbox/9.jpg">
+          <img src="images/lightbox/10.jpg">
+          <img src="images/lightbox/11.jpg">
+        </div>
+        <h3>Row Height and Column Width</h3>
+        <p>Row height with value of 180px and column width with value of 280px</p>
+        <div class="gg-box dark" id="heightWidth">
+          <img src="images/lightbox/13.jpg">
+          <img src="images/lightbox/14.jpg">
+          <img src="images/lightbox/15.jpg">
+          <img src="images/lightbox/16.jpg">
+          <img src="images/lightbox/17.jpg">
+          <img src="images/lightbox/18.jpg">
+        </div>
+      </div>
   </main>
   <footer>
 
-    <div class="container" id="contactform">
-      <div class="row">
-          <div class="col-md-4 col-md-offset-4"></div>
-          <div class="col-md-4 col-md-offset-4" id="form-background" style="background:url(images/formplant2.jpg) rgb(221, 221, 221);"> 
-              <h3>Get in Touch</h3>
-            <form  id="footer-form">
-            
-              <div class="form-group ">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-              </div>
-              <div class="form-group ">
-                <label for="exampleInputPassword1">Name</label>
-                <input type="name" class="form-control" id="name" placeholder="Enter Name">
-              </div>
-              
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Leave a Message</label>
-                <textarea class="form-control" id="textarea" placeholder="Enter Message" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn">Submit</button>
-            </form></div>
-          <div class="col-md-4 col-md-offset-4"></div>
-
-
-      </div>
-         
-        </div>
-      
-        
-    
    
    
   </footer>

@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Poiret+One&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/aa2f1c6bf1.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/parallax.js-1.5.0/parallax.js"></script>
 </head>
 
 <body>
@@ -29,7 +31,7 @@
               <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#footer-form" id="contact">Contact</a>
+                <a class="nav-link" href="contact.html">Contact</a>
               </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,7 +47,7 @@
         </div>
 
 
-          <a href="#images" class="btn" id="view-work">
+          <a href="#header" class="btn" id="view-work">
             About Me
           </a>
         </div>
@@ -55,59 +57,22 @@
     <main>
 
     <div id="header"></div>
-    
+    <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/whiteflowers.jpg">
+      <h3 class="para-header">Hello</h3>
+    </div>
+
     <div class="container" id="images">
       <div class="caption">
-        <h3>Hello</h3>
+        
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quia aliquam labore unde eos cupiditate ipsa accusamus commodi fuga incidunt, velit natus rerum, quos animi saepe cumque. Rerum laudantium vitae debitis laborum qui voluptates est, voluptatem vero, error voluptatibus eveniet. Recusandae velit quo ad adipisci corrupti sunt ipsam provident iste iure est minima dolores, maxime rem, officia sequi. Ea doloribus asperiores tempora aut, accusantium illum nam explicabo delectus? Velit nemo porro deleniti reprehenderit eligendi, pariatur quidem magni commodi iusto excepturi inventore? Eaque voluptatum quidem, sint tenetur consequatur nihil a saepe nemo suscipit odit animi esse molestias eveniet? Repudiandae, repellendus provident.</p>
       </div>
-      <img src="images/beetlebug.jpg"  alt="">
-      
     </div>
-  
+    <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/whiteflowers.jpg">
+      <h3 class="para-header">Hello</h3>
+    </div>
   </main>
   <footer>
 
-      <div class="container" id="contactform">
-      <div class="row">
-          <div class="col-md-4 col-md-offset-4"></div>
-          <div class="col-md-4 col-md-offset-4" id="form-background" style="background:url(images/formplant2.jpg) rgb(221, 221, 221);"> 
-              <h3>Get in Touch</h3>
-            <form  id="footer-form">
-            
-              <div class="form-group ">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-              </div>
-              <div class="form-group ">
-                <label for="exampleInputPassword1">Name</label>
-                <input type="name" class="form-control" id="name" placeholder="Enter Name">
-              </div>
-              
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Leave a Message</label>
-                <textarea class="form-control" id="textarea" placeholder="Enter Message" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn">Submit</button>
-            </form></div>
-          <div class="col-md-4 col-md-offset-4"></div>
-
-
-      </div>
-         
-        </div>
-      
-        <!-- <div class="col-sm">
-          <p>Email or call us to set up a consult</p>
-          <p>Email:
-            <strong>contact@acmephotos.test</strong>
-          </p>
-          <p>
-            Phone:
-            <strong>(610) 333-3333</strong>
-          </p>
-        </div> -->
-    
    
    
   </footer>

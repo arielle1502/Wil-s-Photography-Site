@@ -1,6 +1,6 @@
 //animate smooth scroll
 $('#view-work').on('click', function () {
-  const images1 = $('#images').position().top;
+  const images1 = $('#header').position().top;
 
   $('html, body').animate(
     {
@@ -9,13 +9,13 @@ $('#view-work').on('click', function () {
     900
   );
 });
-$('#contact').on('click', function () {
-  const contact = $('#contactform').position().top;
+// $('#contact').on('click', function () {
+//   const contact = $('#contactform').position().top;
 
-  $('html, body').animate(
-    {
-      scrollTop: contact
-    },
-    900
-  );
-});
+//   $('html, body').animate(
+//     {
+//       scrollTop: contact
+//     },
+//     900
+//   );
+// });
