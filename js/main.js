@@ -19,3 +19,5 @@ $('#view-work').on('click', function () {
 //     900
 //   );
 // });
+// end animate smooth scroll
+
