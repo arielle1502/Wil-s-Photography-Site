@@ -1,18 +1,28 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const port = 3000;
+const express = require('express')
+const path = require('path')
 
-app.use(express.static(path.join(__dirname, './static')));
+const routes = require('./routes/routes.js')
 
-app.get('/', (request, response) =>{
-    response.sendFile(path.join(__dirname, './static/index.html'))
-});
-app.get('/landscapes', (request, response) =>{
+const app = express()
+const port = 3000
+
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, './views'))
+
+app.use(express.static(path.join(__dirname, './static')))
+
+app.use('/', routes())
+
+
+app.get('/landscapes', (request, response)=>{
     response.sendFile(path.join(__dirname, './static/landscapes.html'))
-});
-
-
-app.listen(port, ()=>{
-    console.log(`express server listen on port ${port}`)
+})
+app.get('/street', (request, response)=>{
+    response.sendFile(path.join(__dirname, './static/street.html'))
+})
+app.get('/flora&fauna', (request, response)=>{
+    response.sendFile(path.join(__dirname, './static/flora&fauna.html'))
+})
+app.listen(port, () =>{
+    console.log(`express server listening on port ${port}`)
 })
