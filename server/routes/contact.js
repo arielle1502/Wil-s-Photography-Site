@@ -3,11 +3,11 @@ const express = require('express')
 const router = express.Router()
 
 module.exports = () =>{
-router.get('/', (request, response) =>{
+router.get('/', (req, res, next) =>{
     return response.send('Contact Page')
 })
 
-router.post('/', (request, response) =>{
+router.post('/', (req, res, next) =>{
     return response.send('Feedback form posted')
 })
 return router;

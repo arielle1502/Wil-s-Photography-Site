@@ -5,8 +5,8 @@ const router = express.Router()
 
 module.exports = () =>{
 router.get('/', (request, response) =>{
-    response.render('pages/index', {pageTitle:'Welcome'})
-})
+    response.render('index', {pageTitle:'Welcome'})
+});
 router.use('./viewwork', viewworkRoute());
 router.use('./contact', contactRoute());
 
