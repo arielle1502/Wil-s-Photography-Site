@@ -1,0 +1,24 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "description": "node website",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arielle1502/node-assessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arielle1502/node-assessment/issues"
+  },
+  "homepage": "https://github.com/arielle1502/node-assessment#readme"
+}
