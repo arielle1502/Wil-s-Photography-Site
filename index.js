@@ -8,16 +8,18 @@ const routes = require('./server/routes/routes');
 
 const ViewworkService = require('./server/services/ViewworkService'); 
 const ContactService = require('./server/services/ContactService'); 
+const PersonaliseService = require('./server/services/PersonaliseService');
 
 const app = express();
 const config = configs[ app.get('env') ]
 
 const viewworkService = new ViewworkService(config.data.viewwork); 
 const contactService = new ContactService(config.data.contact); 
+const personaliseService = new PersonaliseService(config.data.users);
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, './server/views'))
-app.use(express.static(path.join(__dirname, './public')))
+app.use(express.static(path.join(__dirname, '/public')))
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -31,6 +33,8 @@ app.use(async (req, res, next) => {
         return next(err);
     }
 });
+
+
 
 app.use('/', routes({
     viewworkService: viewworkService,

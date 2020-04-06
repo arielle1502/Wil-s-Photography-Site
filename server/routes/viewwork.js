@@ -5,12 +5,12 @@ module.exports = (param) =>{
 
     const {viewworkService} = param;
 
-// router.get('/', async (req, res, next) =>{
-//     const viewwork = await viewworkService.getList();
-//     const allPhotos = await viewworkService.getAllPhotos();
+router.get('/', async (req, res, next) =>{
+    const viewwork = await viewworkService.getList();
+    const allPhotos = await viewworkService.getAllPhotos();
 
-//     return res.render('index', {page:'Home', viewwork, photos:allPhotos});
-// })
+    return res.render('typeDetail', {page:'Home', viewwork, photos:allPhotos});
+})
 
 router.get('/:type', async (req, res, next) =>{
 

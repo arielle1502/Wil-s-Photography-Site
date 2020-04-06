@@ -27,10 +27,12 @@ class PersonaliseService {
     const data = await this.getData();
     const user = data.users.find((user) => {
         return user.shortname === 'Arielle_Phillips';
+        
     });
-
+    
     if(!user || !user.mostviewedPhoto) return null;
     return user.mostviewedPhoto; 
+    
   }
 }
 

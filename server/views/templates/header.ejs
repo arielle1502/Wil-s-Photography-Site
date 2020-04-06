@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css" id="swap" type="text/css">
   <title>Wil Shamsabadi Photography</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Amatic+SC|Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Amatic+SC|Poiret+One&display=swap" rel="stylesheet" > 
   <script src="https://kit.fontawesome.com/aa2f1c6bf1.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="js/parallax.js-1.5.0/parallax.js"></script>
-  <link rel="stylesheet" href="css/grid-gallery.min.css">
+  <script src="/js/parallax.js-1.5.0/parallax.js"></script>
+  <link rel="stylesheet" href="/css/grid-gallery.min.css">
   
 </head>
 
@@ -30,19 +30,20 @@
           <div class="container">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link active" href="index">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="contact">Contact</a>
               </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 View Work
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="landscapes.html">Landscapes</a>
-                <a class="dropdown-item" href="street.html">Street</a>
-                <a class="dropdown-item" href="flora&fauna.html">Flora & Fauna</a>
+                <% viewworkTypes.forEach(function(item){ %>
+                  <a class="dropdown-item" href="<%= item.type %>"><%= item.type %></a>
+                <% }); %>
+                
               </div>
             </li>
           </ul>
@@ -50,6 +51,6 @@
 
         </div>
       </div>
-      <div id="landing-image"><img src="images/whiteflowers.jpg" alt=""></div>
+      <div id="landing-image"><img src="/images/lightbox/Landscapes_2.jpg" alt=""></div>
     </div>
     <main>
