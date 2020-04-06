@@ -4,11 +4,11 @@ const router = express.Router()
 
 module.exports = () =>{
 router.get('/', (req, res, next) =>{
-    return response.send('Contact Page')
+    return res.send('Contact Page')
 })
 
-router.post('/', (req, res, next) =>{
-    return response.send('Feedback form posted')
-})
+// router.post('/', (req, res, next) =>{
+//     return response.send('Feedback form posted')
+// })
 return router;
 }

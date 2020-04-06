@@ -1,21 +1,29 @@
 const express = require('express');
 const path = require('path');
-const app = express();
+const bodyParser = require('body-parser');
 
+const configs = require('./server/config')
 const createErrors = require('http-errors');
+const routes = require('./server/routes/routes');
 
+const ViewworkService = require('./server/services/ViewworkService'); 
+const ContactService = require('./server/services/ContactService'); 
+
+const app = express();
+const config = configs[ app.get('env') ]
+
+const viewworkService = new ViewworkService(config.data.viewwork); 
+const contactService = new ContactService(config.data.contact); 
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, './views'))
-
+app.set('views', path.join(__dirname, './server/views'))
 app.use(express.static(path.join(__dirname, './public')))
 
+app.use(bodyParser.urlencoded({extended: true}));
 
 
-
-const routes = require('./server/routes/routes');
-app.use(express.static('static'));
 app.use('/', routes());
+
 
 
 // app.get('/landscapes', (request, response)=>{
