@@ -21,8 +21,22 @@ app.use(express.static(path.join(__dirname, './public')))
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+//Gets the speakers names for the menu
+app.use(async (req, res, next) => {
+    try {
+        const types = await viewworkService.getAlltypes();
+        res.locals.viewworkTypes = types;
+        return next();
+    }catch(err){
+        return next(err);
+    }
+});
 
-app.use('/', routes());
+app.use('/', routes({
+    viewworkService: viewworkService,
+    contactService: contactService,
+    personaliseService: personaliseService
+}));
 
 
 
