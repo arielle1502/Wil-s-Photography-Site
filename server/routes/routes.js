@@ -15,10 +15,9 @@ router.get('/', async(req, res, next) =>{
     const allPhotos = await viewworkService.getAllPhotos();
     
     const usersFavouritePhoto = await personaliseService.getUsersFavouritePhoto("Arielle_Phillips");
-    // not sure how to do this when the param that is supposed to be passed thpugh is a type (landscapes, street, flora&fauana), not a single photo. if i use getAllPhotos(), then it just gives me every photo. do i need to write another function is viewworkServices that takes oone
-    const favouritePhoto = await viewworkService.getPhotosForType(usersFavouritePhoto);
-    console.log(favouritePhoto);
-    return res.render('index', {page:'Home', viewworkList, photos: allPhotos, photo: favouritePhoto});
+    
+    console.log(usersFavouritePhoto);
+    return res.render('index', {page:'Home', viewworkList, photos: allPhotos, photo: usersFavouritePhoto});
 
     
 });
