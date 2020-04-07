@@ -1,59 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Wil Shamsabadi Photography</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Amatic+SC|Poiret+One&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/aa2f1c6bf1.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="js/parallax.js-1.5.0/parallax.js"></script>
-</head>
-
-<body>
-  
-    <!--Landing Area-->
-    
-    <div id="landing">
-      <div id="landing-text">
-        <div id="landing-text-inner">
-          <h1>Wil Shamsabadi</h1>
-          <h3>Photography</h3>
-
-
-          <div class="container">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                View Work
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="landscapes.html">Landscapes</a>
-                <a class="dropdown-item" href="street.html">Street</a>
-                <a class="dropdown-item" href="flora&fauna.httml">Flora & Fauna</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        </div>
-      </div>
-      <div id="landing-image"><img src="images/whiteflowers.jpg" alt=""></div>
-    </div>
-    <main>
+<%- include ('templates/header'); -%> 
 
     <div id="header"></div>
-    <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/whiteflowers.jpg">
+    <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/parallax/Flora & Fauna.jpg">
       <h3 class="para-header">Get in Touch</h3>
     </div>
 
@@ -61,22 +9,23 @@
     <div class="container" id="contactform">
         <div class="row">
             <div class="col-md-3 col-md-offset-3"></div>
-            <div class="col-md-6 col-md-offset-6" id="form-background" style="background:url(images/formplant2.jpg) rgb(221, 221, 221);"> 
+            <div class="col-md-6 col-md-offset-6" id="form-background" style="background: rgb(252, 252, 252);"> 
                 <h3>For  Info  About  Prints  or  Commissions</h3>
-              <form  id="footer-form">
+              <form  id="footer-form" action="/contact" method = "POST">
               
                 <div class="form-group ">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group ">
                   <label for="exampleInputPassword1">Name</label>
-                  <input type="name" class="form-control" id="name" placeholder="Enter Name">
+                  <input type="name" class="form-control" id="name" placeholder="Enter Name"  name="conName">
+                </div>
+                
+                <div class="form-group ">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="conEmail">
                 </div>
                 
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Leave a Message</label>
-                  <textarea class="form-control" id="textarea" placeholder="Enter Message" rows="3"></textarea>
+                  <textarea class="form-control" id="textarea" placeholder="Enter Message"  name="conMessage" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn">Submit</button>
               </form></div>
@@ -89,32 +38,4 @@
    
   </main>
   <hr>
-  <footer>
-    <div class="container">
-      <div class="row">
-      <div class="col-md-6  text-center">
-          
-          <h6>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul></h6>
-      </div>  
-      <div class="col-md-6  text-center">
-          
-        <h6>Social Media</h6>
-        <a href="https://facebook.com"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="https://instagram.com/wil.s_photography"><i class="fab fa-instagram fa-2x"></i></a>
-    </div> 
-  </div>
-</div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-  <script src="js/main.js"></script>
-</body>
-
-</html>
+  <%- include('templates/footer'); -%>

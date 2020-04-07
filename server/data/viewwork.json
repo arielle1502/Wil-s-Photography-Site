@@ -2,14 +2,14 @@
     "viewwork": [{
       "type" : "Landscapes",
       "summary" : "these are photos of landscapes",
-      "lightbox": ["1.jpg", "2.jpg", "3.jpg", "4.jpg","5.jpg", "6.jpg"]
+      "lightbox": ["Landscapes_1.jpg", "Landscapes_2.jpg", "Landscapes_3.jpg", "Landscapes_4.jpg","Landscapes_5.jpg", "Landscapes_6.jpg"]
     },{
         "type" : "Street",
         "summary" : "these are photos of street photography/ photo journalism",
-        "lightbox": ["7.jpg", "8.jpg", "9.jpg", "10.jpg","11.jpg", "12.jpg"]
+        "lightbox": ["Street_1.jpg", "Street_2.jpg", "Street_3.jpg", "Street_4.jpg","Street_5.jpg", "Street_6.jpg"]
     },{
         "type" : "Flora & Fauna",
         "summary" : "these are photos of wildlife and plants",
-        "lightbox": ["13.jpg", "14.jpg", "15.jpg", "16.jpg","17.jpg", "18.jpg"]
+        "lightbox": ["Flora_&_Fauna_1.jpg", "Flora_&_Fauna_2.jpg", "Flora_&_Fauna_3.jpg", "Flora_&_Fauna_4.jpg","Flora_&_Fauna_5.jpg", "Flora_&_Fauna_6.jpg"]
     }]
   }

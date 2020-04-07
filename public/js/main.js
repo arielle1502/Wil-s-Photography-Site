@@ -9,15 +9,14 @@ $('#view-work').on('click', function () {
     900
   );
 });
-// $('#contact').on('click', function () {
-//   const contact = $('#contactform').position().top;
 
-//   $('html, body').animate(
-//     {
-//       scrollTop: contact
-//     },
-//     900
-//   );
-// });
-// end animate smooth scroll
+// function change() 
+// {
+//     var elem = document.getElementById("changeCSS");
+//     if (elem.value=="View in Colour") elem.value = "View in B&W";
+//     else elem.value = "View in Colour";
+// }
 
+function swapStylesheet(sheet) {
+  document.getElementById('swap').setAttribute('href', sheet)
+}
