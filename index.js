@@ -44,15 +44,6 @@ app.use('/', routes({
 
 
 
-// app.get('/landscapes', (request, response)=>{
-//     response.sendFile(path.join(__dirname, './static/landscapes.html'))
-// })
-// app.get('/street', (request, response)=>{
-//     response.sendFile(path.join(__dirname, './static/street.html'))
-// })
-// app.get('/flora&fauna', (request, response)=>{
-//     response.sendFile(path.join(__dirname, './static/flora&fauna.html'))
-// })
 
 app.use((req, res, next) => {
     return next(createErrors(404, 'File Not Found'));

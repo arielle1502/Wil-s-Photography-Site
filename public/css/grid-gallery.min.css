@@ -5,8 +5,8 @@
     --img-bg-color: rgba(240, 240, 240, 0.9);
     --backdrop-color: rgba(240, 240, 240, 0.9);
     --gap-length: 2px;
-    --row-height: 200px;
-    --column-width: 220px;
+    --row-height: 350px;
+    --column-width: 400px;
   }
   
   .gg-container *[data-theme="dark"] {
@@ -39,7 +39,7 @@
   
   #gg-screen {
     position: fixed;
-    width: 100%;
+    max-width: 1000px;
     height: 100%;
     top: 0;
     left: 0;

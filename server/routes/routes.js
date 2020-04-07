@@ -1,5 +1,5 @@
 const express = require('express')
-const viewworkRoute = require ('./viewwork')
+
 const contactRoute = require ('./contact')
 const router = express.Router()
 
@@ -15,13 +15,38 @@ router.get('/', async(req, res, next) =>{
     const allPhotos = await viewworkService.getAllPhotos();
     
     const usersFavouritePhoto = await personaliseService.getUsersFavouritePhoto("Arielle_Phillips");
-    const favouritePhoto = await viewworkService.getAllPhotos(usersFavouritePhoto);
+    // not sure how to do this when the param that is supposed to be passed thpugh is a type (landscapes, street, flora&fauana), not a single photo. if i use getAllPhotos(), then it just gives me every photo. do i need to write another function is viewworkServices that takes oone
+    const favouritePhoto = await viewworkService.getPhotosForType(usersFavouritePhoto);
     console.log(favouritePhoto);
-    return res.render('index', {page:'Home', viewworkList, allPhotos, photo: favouritePhoto});
+    return res.render('index', {page:'Home', viewworkList, photos: allPhotos, photo: favouritePhoto});
 
     
 });
-router.use('/viewwork', viewworkRoute(param));
+router.get('/:type', async (req, res, next) =>{
+
+    try{
+        const promises = []; //Creates a empty array
+                promises.push(viewworkService.getOnetype(req.params.type)); //This pushes our first promise into the empty array
+                promises.push(viewworkService.getPhotosForType(req.params.type)); //This pushes our second promise into the array
+                const result = await Promise.all(promises) //This waits for both promises to finish and returns the result in an array
+    
+                //If the no data is returned 
+                if(!result[0]){
+                    return next();
+    }
+    
+       //Renders the page and passes in the data as JSON
+            return res.render('typeDetail', {
+                page: req.params.type, 
+                type: result[0],
+                photos: result[1],
+            });
+        }catch (err){
+            return next(err);
+        }
+    
+    });
+
 router.use('/contact', contactRoute(param));
 
 return router;

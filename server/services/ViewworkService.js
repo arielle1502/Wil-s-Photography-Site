@@ -45,7 +45,7 @@ class ViewworkService{
             summary: oneType.summary
         }
     }
-
+    
     async getPhotosForType(type){
         const data = await this.getData()
         const oneType = data.find((oneType)=>{
