@@ -15,17 +15,17 @@
               
                 <div class="form-group ">
                   <label for="exampleInputPassword1">Name</label>
-                  <input type="name" class="form-control" id="name" placeholder="Enter Name"  name="conName">
+                  <input type="name" class="form-control" id="name" placeholder="Enter Name"  name="conName" required minlength="6" maxlength="40">
                 </div>
                 
                 <div class="form-group ">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="conEmail">
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="conEmail" required minlength="6" maxlength="40">
                 </div>
                 
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Leave a Message</label>
-                  <textarea class="form-control" id="textarea" placeholder="Enter Message"  name="conMessage" rows="3"></textarea>
+                  <textarea class="form-control" id="textarea" placeholder="Enter Message"  name="conMessage" rows="3" maxlength="200"></textarea>
                 </div>
                 <button type="submit" class="btn">Submit</button>
               </form></div>

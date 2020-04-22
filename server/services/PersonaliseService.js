@@ -1,4 +1,4 @@
-//1. Add the following code then open server>index.js
+// Personalise Service Class's purpose is to load the data from users.json and sort through to find the users most viewed photo. All data is loaded into the variable 'data', and the variable 'user' hold the users information that was loacted through the user's shortname
 const fs = require('fs');
 const util = require('util');
 
@@ -22,7 +22,7 @@ class PersonaliseService {
     return JSON.parse(data);
   }
 
-  //Takes the users short name and returns the users favorite artist
+  //Takes the users short name and returns the users favorite photo
   async getUsersFavouritePhoto(shortname){
     const data = await this.getData();
     const user = data.users.find((user) => {
