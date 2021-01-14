@@ -1,3 +1,4 @@
+// this is where all of the information that is submitted on the contact page is processed. The contact ejs page is rendered, and then the submission of data is passed to the data base once the addEntry function is called
 const express = require('express')
 
 const router = express.Router()
@@ -11,8 +12,6 @@ router.get('/', async (req, res, next) =>{
    const contactlist = await contactService.getList();
    try{
        //Renders the page and passes in the contact data
-       //success: req.query.success - Check if the form has been submitted successfully
-       //Now in the template we can check if it was successful or not
        return res.render('contact', {
            page: 'Contact',
            contactlist,
@@ -35,9 +34,8 @@ const conName = req.body.conName.trim();
 const conEmail = req.body.conEmail.trim();
 const conMessage = req.body.conMessage.trim();
 
-//If there is a validation error then we want to reload the contact page
-//We also want to populate the fields that were filled in correctly
-//This way they don't have to retype everything
+//If there is a validation error then the contact page is reloaded
+
 if(!conName || !conEmail || !conMessage){
    return res.render('contact', 
    {
@@ -52,8 +50,7 @@ if(!conName || !conEmail || !conMessage){
 //Call the addEntry function and write the data
 await contactService.addEntry(conName, conEmail, conMessage);
 
-//Now we want to send the users to a page that indicates they have submitted successfully
-//To do this we will use a redirect
+// a redirect to show the user that their submission was successful will be located in the URL bar
 return res.redirect('/contact?success=true')
 }catch(err){
 return next(err);

@@ -1,3 +1,4 @@
+// this is where the routes for all of the photo information will be passed on to be rendered by the home, landscape, flora & Fauna, and street ejs pages
 const express = require('express')
 
 const contactRoute = require ('./contact')
@@ -13,10 +14,9 @@ router.get('/', async(req, res, next) =>{
 
     const viewworkList = await viewworkService.getList();
     const allPhotos = await viewworkService.getAllPhotos();
-    
     const usersFavouritePhoto = await personaliseService.getUsersFavouritePhoto("Arielle_Phillips");
-    
     console.log(usersFavouritePhoto);
+    // view worklist will hold all fo the data for every photo type, 'photos' will hold all photos, and 'photo' will hold the users most viewed photo, all to be accessed in the views
     return res.render('index', {page:'Home', viewworkList, photos: allPhotos, photo: usersFavouritePhoto});
 
     
@@ -34,7 +34,7 @@ router.get('/:type', async (req, res, next) =>{
                     return next();
     }
     
-       //Renders the page and passes in the data as JSON
+       //Renders the typeDetail page and passes in the data as JSON
             return res.render('typeDetail', {
                 page: req.params.type, 
                 type: result[0],
